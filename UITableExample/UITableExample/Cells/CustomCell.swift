@@ -4,16 +4,11 @@
 //
 //  Created by max on 19.01.2022.
 //
+
+import Foundation
 import UIKit
 
-class DefaultCell: UITableViewCell {
-    
-    func configureView(with models: DataForTable) {
-          
-        titleLabel.text = models.title
-        iconView.image = UIImage(systemName: models.image)
-        iconView.backgroundColor = models.background
-    }
+class CustomCell: UITableViewCell {
     
     let cellView: UIView = {
         let view = UIView()
@@ -25,6 +20,7 @@ class DefaultCell: UITableViewCell {
         icon.contentMode = .center
         icon.layer.cornerRadius = 5
         icon.tintColor = .white
+
         return icon
     }()
     
@@ -33,21 +29,24 @@ class DefaultCell: UITableViewCell {
         let icon = UIImageView(image: image)
         icon.contentMode = .center
         icon.tintColor = .systemGray
+
         return icon
     }()
+    
     
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "text"
         label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: Metric.titleLabelFontSize)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
+        
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         cellSetup()
-        additionalCellSetup()
+        cellSetup2()
     }
     
     required init?(coder: NSCoder) {
@@ -61,33 +60,27 @@ class DefaultCell: UITableViewCell {
         
         cellView.addSubview(iconView)
         iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.widthAnchor.constraint(equalToConstant: Metric.iconWidth).isActive = true
-        iconView.heightAnchor.constraint(equalToConstant: Metric.iconHeight).isActive = true
+        
+        iconView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        iconView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
         iconView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-        iconView.leftAnchor.constraint(equalTo:  cellView.leftAnchor, constant: Metric.iconLeftOffset).isActive = true
+        iconView.leftAnchor.constraint(equalTo:  cellView.leftAnchor, constant: 20).isActive = true
+        
         
         cellView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.centerYAnchor.constraint(equalTo: iconView.centerYAnchor).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo:  iconView.leftAnchor, constant: Metric.titleLabelLeftOffset).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo:  iconView.leftAnchor, constant: 50).isActive = true
     }
     
-    func additionalCellSetup() {
+    func cellSetup2() {
         
         cellView.addSubview(chevronView)
         chevronView.translatesAutoresizingMaskIntoConstraints = false
         chevronView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-        chevronView.leftAnchor.constraint(equalTo:  cellView.rightAnchor, constant: Metric.chevronViewLeftOffset).isActive = true
-    }    
+        chevronView.leftAnchor.constraint(equalTo:  cellView.rightAnchor, constant: -30).isActive = true
+    }
+    
 }
 
-extension DefaultCell {
-    enum Metric {
-        static let iconHeight: CGFloat = 30
-        static let iconWidth: CGFloat = 30
-        static let iconLeftOffset: CGFloat = 20
-        static let titleLabelLeftOffset: CGFloat = 50
-        static let chevronViewLeftOffset: CGFloat = -30
-        static let titleLabelFontSize: CGFloat = 16
-    }
-}
