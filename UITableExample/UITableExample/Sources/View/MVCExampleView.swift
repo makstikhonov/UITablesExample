@@ -5,10 +5,16 @@
 //  Created by max on 20.01.2022.
 //
 
-import Foundation
 import UIKit
 
+protocol MVCExampleViewDelegate: AnyObject {
+    
+    func actionDidPressed(txt: String)
+}
+
 final class MVCExampleView: UIView {
+    
+    weak var delegate: MVCExampleViewDelegate?
     
     func configureView(with models: [[DataForTable]]) {
         self.models = models
@@ -58,8 +64,6 @@ final class MVCExampleView: UIView {
 
         return view
     }()
-    
-
 }
     
 extension MVCExampleView: UITableViewDelegate {
@@ -67,6 +71,8 @@ extension MVCExampleView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Pressed Cell: \(models[indexPath.section][indexPath.row].title )")
+        
+        delegate?.actionDidPressed(txt: models[indexPath.section][indexPath.row].title)
     }
     
 }

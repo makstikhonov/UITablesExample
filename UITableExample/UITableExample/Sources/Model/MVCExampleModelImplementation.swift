@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-final class MVCExampleModel  {
+protocol MVCExampleModel {
+    
+    func createModels() -> [[DataForTable]]
+}
+
+final class MVCExampleModelImplementation: MVCExampleModel {
     
     func createModels() -> [[DataForTable]]{
         return  [

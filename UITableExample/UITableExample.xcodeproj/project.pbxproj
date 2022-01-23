@@ -13,11 +13,14 @@
 		5091BCA327980FC4000E0596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091BCA227980FC4000E0596 /* Assets.xcassets */; };
 		5091BCA627980FC4000E0596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091BCA427980FC4000E0596 /* LaunchScreen.storyboard */; };
 		5091BCAE279811B1000E0596 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAD279811B1000E0596 /* ViewExtension.swift */; };
-		5091BCB0279811E7000E0596 /* MVCExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAF279811E7000E0596 /* MVCExampleModel.swift */; };
+		5091BCB0279811E7000E0596 /* MVCExampleModelImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */; };
 		5091BCB22798126B000E0596 /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCB12798126B000E0596 /* DefaultCell.swift */; };
 		5091BCB42798129D000E0596 /* CellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCB32798129D000E0596 /* CellWithSwitch.swift */; };
 		50ADBD4D27999B3D003949EA /* MVCExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD4C27999B3D003949EA /* MVCExampleView.swift */; };
 		50ADBD4F279AD928003949EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD4E279AD928003949EA /* Data.swift */; };
+		50ADBD59279C48AF003949EA /* MVCExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */; };
+		50ADBD5B279C567B003949EA /* MVCExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */; };
+		50ADBD5E279D4B30003949EA /* MVCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +32,14 @@
 		5091BCA527980FC4000E0596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5091BCA727980FC4000E0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5091BCAD279811B1000E0596 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		5091BCAF279811E7000E0596 /* MVCExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleModel.swift; sourceTree = "<group>"; };
+		5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleModelImplementation.swift; sourceTree = "<group>"; };
 		5091BCB12798126B000E0596 /* DefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
 		5091BCB32798129D000E0596 /* CellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithSwitch.swift; sourceTree = "<group>"; };
 		50ADBD4C27999B3D003949EA /* MVCExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleView.swift; sourceTree = "<group>"; };
 		50ADBD4E279AD928003949EA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExamplePresenter.swift; sourceTree = "<group>"; };
+		50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleAssembly.swift; sourceTree = "<group>"; };
+		50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,8 @@
 		50ADBD4327999550003949EA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				50ADBD4B2799968F003949EA /* Controller */,
+				50ADBD5F279D5D73003949EA /* Assembly */,
+				50ADBD57279C4552003949EA /* Presenter */,
 				50ADBD4A27999686003949EA /* View */,
 				50ADBD4927999662003949EA /* Model */,
 				50ADBD47279995E0003949EA /* App */,
@@ -114,7 +121,7 @@
 		50ADBD4927999662003949EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5091BCAF279811E7000E0596 /* MVCExampleModel.swift */,
+				5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */,
 				50ADBD4E279AD928003949EA /* Data.swift */,
 			);
 			path = Model;
@@ -123,19 +130,37 @@
 		50ADBD4A27999686003949EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50ADBD5C279D4ABB003949EA /* Navigation */,
 				5091BCB5279812B8000E0596 /* Cells */,
 				5091BCAD279811B1000E0596 /* ViewExtension.swift */,
 				50ADBD4C27999B3D003949EA /* MVCExampleView.swift */,
+				5091BC9D27980FC2000E0596 /* MVCExampleController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		50ADBD4B2799968F003949EA /* Controller */ = {
+		50ADBD57279C4552003949EA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				5091BC9D27980FC2000E0596 /* MVCExampleController.swift */,
+				50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */,
 			);
-			path = Controller;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50ADBD5C279D4ABB003949EA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		50ADBD5F279D5D73003949EA /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50ADBD5E279D4B30003949EA /* MVCSettingsViewController.swift in Sources */,
+				50ADBD59279C48AF003949EA /* MVCExamplePresenter.swift in Sources */,
+				50ADBD5B279C567B003949EA /* MVCExampleAssembly.swift in Sources */,
 				5091BC9E27980FC2000E0596 /* MVCExampleController.swift in Sources */,
-				5091BCB0279811E7000E0596 /* MVCExampleModel.swift in Sources */,
+				5091BCB0279811E7000E0596 /* MVCExampleModelImplementation.swift in Sources */,
 				5091BC9A27980FC2000E0596 /* AppDelegate.swift in Sources */,
 				5091BCB42798129D000E0596 /* CellWithSwitch.swift in Sources */,
 				5091BC9C27980FC2000E0596 /* SceneDelegate.swift in Sources */,
