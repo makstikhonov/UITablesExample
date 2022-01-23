@@ -9,37 +9,51 @@
 /* Begin PBXBuildFile section */
 		5091BC9A27980FC2000E0596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BC9927980FC2000E0596 /* AppDelegate.swift */; };
 		5091BC9C27980FC2000E0596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BC9B27980FC2000E0596 /* SceneDelegate.swift */; };
-		5091BC9E27980FC2000E0596 /* MVCExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BC9D27980FC2000E0596 /* MVCExampleController.swift */; };
+		5091BC9E27980FC2000E0596 /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BC9D27980FC2000E0596 /* ViperViewController.swift */; };
 		5091BCA327980FC4000E0596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091BCA227980FC4000E0596 /* Assets.xcassets */; };
 		5091BCA627980FC4000E0596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091BCA427980FC4000E0596 /* LaunchScreen.storyboard */; };
 		5091BCAE279811B1000E0596 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAD279811B1000E0596 /* ViewExtension.swift */; };
-		5091BCB0279811E7000E0596 /* MVCExampleModelImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */; };
+		5091BCB0279811E7000E0596 /* ViperModelImplementaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCAF279811E7000E0596 /* ViperModelImplementaion.swift */; };
 		5091BCB22798126B000E0596 /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCB12798126B000E0596 /* DefaultCell.swift */; };
 		5091BCB42798129D000E0596 /* CellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091BCB32798129D000E0596 /* CellWithSwitch.swift */; };
-		50ADBD4D27999B3D003949EA /* MVCExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD4C27999B3D003949EA /* MVCExampleView.swift */; };
+		50ADBD4D27999B3D003949EA /* ViperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD4C27999B3D003949EA /* ViperView.swift */; };
 		50ADBD4F279AD928003949EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD4E279AD928003949EA /* Data.swift */; };
-		50ADBD59279C48AF003949EA /* MVCExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */; };
-		50ADBD5B279C567B003949EA /* MVCExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */; };
-		50ADBD5E279D4B30003949EA /* MVCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */; };
+		50ADBD59279C48AF003949EA /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD58279C48AF003949EA /* ViperPresenter.swift */; };
+		50ADBD5B279C567B003949EA /* ViperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5A279C567B003949EA /* ViperAssembly.swift */; };
+		50ADBD5E279D4B30003949EA /* ViperViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD5D279D4B30003949EA /* ViperViewSettings.swift */; };
+		50ADBD61279D78FC003949EA /* ViperViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD60279D78FC003949EA /* ViperViewInput.swift */; };
+		50ADBD63279D7928003949EA /* ViperViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD62279D7928003949EA /* ViperViewOutput.swift */; };
+		50ADBD66279D7A49003949EA /* ViperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD65279D7A49003949EA /* ViperInteractor.swift */; };
+		50ADBD68279D7A5A003949EA /* ViperInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD67279D7A5A003949EA /* ViperInteractorOutput.swift */; };
+		50ADBD6A279D7A69003949EA /* ViperInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD69279D7A69003949EA /* ViperInteractorInput.swift */; };
+		50ADBD6E279D7ADF003949EA /* ViperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD6D279D7ADF003949EA /* ViperRouter.swift */; };
+		50ADBD70279D7AFE003949EA /* ViperRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADBD6F279D7AFE003949EA /* ViperRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5091BC9627980FC2000E0596 /* UITableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091BC9927980FC2000E0596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091BC9B27980FC2000E0596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5091BC9D27980FC2000E0596 /* MVCExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleController.swift; sourceTree = "<group>"; };
+		5091BC9D27980FC2000E0596 /* ViperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
 		5091BCA227980FC4000E0596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5091BCA527980FC4000E0596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5091BCA727980FC4000E0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5091BCAD279811B1000E0596 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleModelImplementation.swift; sourceTree = "<group>"; };
+		5091BCAF279811E7000E0596 /* ViperModelImplementaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModelImplementaion.swift; sourceTree = "<group>"; };
 		5091BCB12798126B000E0596 /* DefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
 		5091BCB32798129D000E0596 /* CellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithSwitch.swift; sourceTree = "<group>"; };
-		50ADBD4C27999B3D003949EA /* MVCExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleView.swift; sourceTree = "<group>"; };
+		50ADBD4C27999B3D003949EA /* ViperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperView.swift; sourceTree = "<group>"; };
 		50ADBD4E279AD928003949EA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExamplePresenter.swift; sourceTree = "<group>"; };
-		50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCExampleAssembly.swift; sourceTree = "<group>"; };
-		50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCSettingsViewController.swift; sourceTree = "<group>"; };
+		50ADBD58279C48AF003949EA /* ViperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
+		50ADBD5A279C567B003949EA /* ViperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperAssembly.swift; sourceTree = "<group>"; };
+		50ADBD5D279D4B30003949EA /* ViperViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewSettings.swift; sourceTree = "<group>"; };
+		50ADBD60279D78FC003949EA /* ViperViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewInput.swift; sourceTree = "<group>"; };
+		50ADBD62279D7928003949EA /* ViperViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewOutput.swift; sourceTree = "<group>"; };
+		50ADBD65279D7A49003949EA /* ViperInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperInteractor.swift; sourceTree = "<group>"; };
+		50ADBD67279D7A5A003949EA /* ViperInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperInteractorOutput.swift; sourceTree = "<group>"; };
+		50ADBD69279D7A69003949EA /* ViperInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperInteractorInput.swift; sourceTree = "<group>"; };
+		50ADBD6D279D7ADF003949EA /* ViperRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperRouter.swift; sourceTree = "<group>"; };
+		50ADBD6F279D7AFE003949EA /* ViperRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,8 @@
 		50ADBD4327999550003949EA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				50ADBD6B279D7AB0003949EA /* Router */,
+				50ADBD64279D7A35003949EA /* Interactor */,
 				50ADBD5F279D5D73003949EA /* Assembly */,
 				50ADBD57279C4552003949EA /* Presenter */,
 				50ADBD4A27999686003949EA /* View */,
@@ -121,7 +137,7 @@
 		50ADBD4927999662003949EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5091BCAF279811E7000E0596 /* MVCExampleModelImplementation.swift */,
+				5091BCAF279811E7000E0596 /* ViperModelImplementaion.swift */,
 				50ADBD4E279AD928003949EA /* Data.swift */,
 			);
 			path = Model;
@@ -133,8 +149,10 @@
 				50ADBD5C279D4ABB003949EA /* Navigation */,
 				5091BCB5279812B8000E0596 /* Cells */,
 				5091BCAD279811B1000E0596 /* ViewExtension.swift */,
-				50ADBD4C27999B3D003949EA /* MVCExampleView.swift */,
-				5091BC9D27980FC2000E0596 /* MVCExampleController.swift */,
+				50ADBD4C27999B3D003949EA /* ViperView.swift */,
+				5091BC9D27980FC2000E0596 /* ViperViewController.swift */,
+				50ADBD60279D78FC003949EA /* ViperViewInput.swift */,
+				50ADBD62279D7928003949EA /* ViperViewOutput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,7 +160,7 @@
 		50ADBD57279C4552003949EA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				50ADBD58279C48AF003949EA /* MVCExamplePresenter.swift */,
+				50ADBD58279C48AF003949EA /* ViperPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -150,7 +168,7 @@
 		50ADBD5C279D4ABB003949EA /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				50ADBD5D279D4B30003949EA /* MVCSettingsViewController.swift */,
+				50ADBD5D279D4B30003949EA /* ViperViewSettings.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -158,9 +176,28 @@
 		50ADBD5F279D5D73003949EA /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				50ADBD5A279C567B003949EA /* MVCExampleAssembly.swift */,
+				50ADBD5A279C567B003949EA /* ViperAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		50ADBD64279D7A35003949EA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				50ADBD65279D7A49003949EA /* ViperInteractor.swift */,
+				50ADBD69279D7A69003949EA /* ViperInteractorInput.swift */,
+				50ADBD67279D7A5A003949EA /* ViperInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		50ADBD6B279D7AB0003949EA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				50ADBD6D279D7ADF003949EA /* ViperRouter.swift */,
+				50ADBD6F279D7AFE003949EA /* ViperRouterInput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,16 +270,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ADBD5E279D4B30003949EA /* MVCSettingsViewController.swift in Sources */,
-				50ADBD59279C48AF003949EA /* MVCExamplePresenter.swift in Sources */,
-				50ADBD5B279C567B003949EA /* MVCExampleAssembly.swift in Sources */,
-				5091BC9E27980FC2000E0596 /* MVCExampleController.swift in Sources */,
-				5091BCB0279811E7000E0596 /* MVCExampleModelImplementation.swift in Sources */,
+				50ADBD63279D7928003949EA /* ViperViewOutput.swift in Sources */,
+				50ADBD5E279D4B30003949EA /* ViperViewSettings.swift in Sources */,
+				50ADBD70279D7AFE003949EA /* ViperRouterInput.swift in Sources */,
+				50ADBD59279C48AF003949EA /* ViperPresenter.swift in Sources */,
+				50ADBD5B279C567B003949EA /* ViperAssembly.swift in Sources */,
+				50ADBD6E279D7ADF003949EA /* ViperRouter.swift in Sources */,
+				5091BC9E27980FC2000E0596 /* ViperViewController.swift in Sources */,
+				50ADBD6A279D7A69003949EA /* ViperInteractorInput.swift in Sources */,
+				5091BCB0279811E7000E0596 /* ViperModelImplementaion.swift in Sources */,
 				5091BC9A27980FC2000E0596 /* AppDelegate.swift in Sources */,
 				5091BCB42798129D000E0596 /* CellWithSwitch.swift in Sources */,
+				50ADBD61279D78FC003949EA /* ViperViewInput.swift in Sources */,
 				5091BC9C27980FC2000E0596 /* SceneDelegate.swift in Sources */,
-				50ADBD4D27999B3D003949EA /* MVCExampleView.swift in Sources */,
+				50ADBD4D27999B3D003949EA /* ViperView.swift in Sources */,
 				5091BCB22798126B000E0596 /* DefaultCell.swift in Sources */,
+				50ADBD66279D7A49003949EA /* ViperInteractor.swift in Sources */,
+				50ADBD68279D7A5A003949EA /* ViperInteractorOutput.swift in Sources */,
 				50ADBD4F279AD928003949EA /* Data.swift in Sources */,
 				5091BCAE279811B1000E0596 /* ViewExtension.swift in Sources */,
 			);

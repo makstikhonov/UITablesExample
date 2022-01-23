@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: MVCExampleAssembly.configuredModule())
+        window?.rootViewController = UINavigationController(rootViewController: ViperAssembly.configuredModule())
         
     }
 }

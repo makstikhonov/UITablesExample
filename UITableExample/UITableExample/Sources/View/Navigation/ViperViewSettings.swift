@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MVCSettingsViewController: UIViewController {
+class ViperViewSettings: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,4 @@ class MVCSettingsViewController: UIViewController {
     func setText(txt: String){
         textLabel.text = txt
     }
-    
-    
 }
