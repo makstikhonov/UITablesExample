@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-final class MVCExampleModel  {
+protocol ViperModel {
+    
+    func createModels() -> [[DataForTable]]
+}
+
+final class ViperModelImplementaion: ViperModel {
     
     func createModels() -> [[DataForTable]]{
         return  [

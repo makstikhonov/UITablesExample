@@ -5,10 +5,16 @@
 //  Created by max on 20.01.2022.
 //
 
-import Foundation
 import UIKit
 
-final class MVCExampleView: UIView {
+protocol ViperViewDelegate: AnyObject {
+    
+    func actionDidPressed(txt: String)
+}
+
+final class ViperView: UIView {
+    
+    weak var delegate: ViperViewDelegate?
     
     func configureView(with models: [[DataForTable]]) {
         self.models = models
@@ -23,7 +29,7 @@ final class MVCExampleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
+    private func setup() {
         backgroundColor = .white
         addSubview(stackView)
         stackView.addArrangedSubview(tableView)
@@ -58,20 +64,19 @@ final class MVCExampleView: UIView {
 
         return view
     }()
-    
-
 }
     
-extension MVCExampleView: UITableViewDelegate {
+extension ViperView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Pressed Cell: \(models[indexPath.section][indexPath.row].title )")
+        
+        delegate?.actionDidPressed(txt: models[indexPath.section][indexPath.row].title)
     }
-    
 }
 
-extension MVCExampleView: UITableViewDataSource {
+extension ViperView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
@@ -95,7 +100,7 @@ extension MVCExampleView: UITableViewDataSource {
     }
 }
 
-extension MVCExampleView {
+extension ViperView {
     enum Metric {
         static let tableViewRowHeight: CGFloat = 40
         static let tableViewSeparatorLeftOffset: CGFloat = 70
